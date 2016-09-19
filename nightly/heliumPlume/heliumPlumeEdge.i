@@ -206,6 +206,9 @@ realms:
 
           compute_tke: yes 
           compute_reynolds_stress: yes
+          compute_vorticity: yes
+          compute_q_criterion: yes
+          compute_lambda_ci: yes
 
     output:
       serialized_io_group_size: 2
@@ -227,7 +230,9 @@ realms:
        - resolved_turbulent_ke_ra_one
        - resolved_turbulent_ke_fa_one
        - reynolds_stress
-
+       - vorticity
+       - q_criterion
+       - lambda_ci
     restart:
       restart_data_base_name: heliumPlumeEdge.rst
       restart_frequency: 2 

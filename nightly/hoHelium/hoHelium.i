@@ -154,6 +154,9 @@ realms:
 
           compute_tke: yes 
           compute_reynolds_stress: yes
+          compute_vorticity: yes
+          compute_q_criterion: yes
+          compute_lambda_ci: yes
 
     output:
       output_data_base_name: hoHelium.e
@@ -168,6 +171,9 @@ realms:
        - mixture_fraction_fa_one
        - resolved_turbulent_ke_ra_one
        - reynolds_stress
+       - vorticity
+       - q_criterion
+       - lambda_ci
 
 Time_Integrators:
   - StandardTimeIntegrator:
